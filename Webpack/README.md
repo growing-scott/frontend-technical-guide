@@ -24,6 +24,7 @@ webpack.config.js 파일을 가지며, 일반적으로 배포와 개발용으로
     - string, array, object 형태를 지원하며, 각각의 특징이 있다.
     - string
         - 단일 진입점으로 구성되는 프로젝트의 경우에 해당되며, output도 하나의 파일만 생성된다.
+
         `
          {
              entry: './src/index.js',
@@ -38,6 +39,7 @@ webpack.config.js 파일을 가지며, 일반적으로 배포와 개발용으로
         - 단일 진입점이나 덪붙여서 생성될 필요가 있는 경우에 해당되며, output은 하나의 파일이 생성된다.
         - attach1, attach2는 index.js와 의존성이 없으며, index.js로 생성된 bundle.js에 attach1, attach2가 추가된다.
         - 실제 application에서 의존관계가 없는 파일을 추가하고자 할 때 사용한다.
+
         `
          {
              entry: ['./src/index.js', '/src/attach1.js', '/src/attach2.js'],
@@ -51,6 +53,7 @@ webpack.config.js 파일을 가지며, 일반적으로 배포와 개발용으로
     - object
         - 다중 페이지 Application을 개발 중이고, 각각 진입점(a, b, c index page)가 있다면 해당되는 경우이다.
         - output도 하나의 bundle.js가 아닌 key(명칭)으로 bundle파일이 생성된다.
+        
         `
          {
              entry: {
