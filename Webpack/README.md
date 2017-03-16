@@ -1,6 +1,20 @@
 # Webpack
 Webpack은 bundler(배포)와 개발 서버 등을 지원하며, Webpack 2.x 버전 기준으로 작성하였습니다.
 
+- SPA Application 개발 또는 의존 관계를 가지는 프로젝트에서 root 모듈을 기준으로 트리 구조(hierarchy)를 가지고 있다.
+    ```
+        아래와 같은 디렉토리 구조를 가지는 application을 배포하는 단계에서는 하나의 파일(bundle)로 만들어서 배포한다.
+        Webpack은 대표적으로 진입점에서 시작하여 각 모듈간 의존관계를 추적하여 하나의 파일로 묶어주는 역할을 한다.
+        - root.js(entry - 진입점)
+            - a.js
+                - a-1.js
+                - a-2.js
+            - b.js
+                - b-b-1.js
+                    - b-b-b-1.js
+    ```    
+
+
 - webpack.config.js 파일을 가지며, 일반적으로 배포와 개발용으로 나눠서 관리한다.
 - 개발: dev-webpack.config.js
     - 개발서버(hot module) 설정
@@ -13,6 +27,7 @@ Webpack은 bundler(배포)와 개발 서버 등을 지원하며, Webpack 2.x 버
         - less to css
         - image to metadata
         - code splitting
+        - tree shaking
 
 
 
