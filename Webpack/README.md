@@ -1,12 +1,11 @@
 # Webpack
-Webpack 2.x 버전 기준으로 작성하였습니다.
-Webpack은 bundler(배포)와 개발 서버 등을 지원한다.
+Webpack은 bundler(배포)와 개발 서버 등을 지원하며, Webpack 2.x 버전 기준으로 작성하였습니다.
 
-webpack.config.js 파일을 가지며, 일반적으로 배포와 개발용으로 나눠서 관리한다.
-개발: dev-webpack.config.js
+- webpack.config.js 파일을 가지며, 일반적으로 배포와 개발용으로 나눠서 관리한다.
+- 개발: dev-webpack.config.js
     - 개발서버(hot module) 설정
     - entry, loader 설정
-배포: prod-webpack.config.js
+- 배포: prod-webpack.config.js
     - output 설정
     - loader 설정
     - plugins
@@ -53,7 +52,7 @@ webpack.config.js 파일을 가지며, 일반적으로 배포와 개발용으로
     - object
         - 다중 페이지 Application을 개발 중이고, 각각 진입점(a, b, c index page)가 있다면 해당되는 경우이다.
         - output도 하나의 bundle.js가 아닌 key(명칭)으로 bundle파일이 생성된다.
-        
+
         `
          {
              entry: {
