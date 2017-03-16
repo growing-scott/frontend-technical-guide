@@ -39,7 +39,7 @@ Webpack은 bundler(배포)와 개발 서버 등을 지원하며, Webpack 2.x 버
         - attach1, attach2는 index.js와 의존성이 없으며, index.js로 생성된 bundle.js에 attach1, attach2가 추가된다.
         - 실제 application에서 의존관계가 없는 파일을 추가하고자 할 때 사용한다.
 
-        `
+        ```
          {
              entry: ['./src/index.js', '/src/attach1.js', '/src/attach2.js'],
              output: {
@@ -47,13 +47,13 @@ Webpack은 bundler(배포)와 개발 서버 등을 지원하며, Webpack 2.x 버
                  filename: 'bundle.js'
              }
          }
-        `
+        ```
 
     - object
         - 다중 페이지 Application을 개발 중이고, 각각 진입점(a, b, c index page)가 있다면 해당되는 경우이다.
         - output도 하나의 bundle.js가 아닌 key(명칭)으로 bundle파일이 생성된다.
 
-        `
+        ```
          {
              entry: {
                  'home': './src/home/index.js',
@@ -66,7 +66,7 @@ Webpack은 bundler(배포)와 개발 서버 등을 지원하며, Webpack 2.x 버
                  filename: '[name].js'  // out files - home.js, work.js, vendor.js
              }
          }
-        `    
+        ```
 
 2. Output
 
