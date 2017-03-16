@@ -24,7 +24,7 @@ Webpack은 bundler(배포)와 개발 서버 등을 지원하며, Webpack 2.x 버
     - string
         - 단일 진입점으로 구성되는 프로젝트의 경우에 해당되며, output도 하나의 파일만 생성된다.
 
-        `
+        ```
          {
              entry: './src/index.js',
              output: {
@@ -32,7 +32,7 @@ Webpack은 bundler(배포)와 개발 서버 등을 지원하며, Webpack 2.x 버
                  filename: 'bundle.js'
              }
          }
-        `
+        ```
 
     - array
         - 단일 진입점이나 덪붙여서 생성될 필요가 있는 경우에 해당되며, output은 하나의 파일이 생성된다.
